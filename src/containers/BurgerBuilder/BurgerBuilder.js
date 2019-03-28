@@ -93,28 +93,29 @@ class BurgerBuilder extends Component {
 
         purchaseContinueHandler = () => {
             // alert('You continue!');
-            this.setState({loading: true});
-            const order = {
-                ingredients: this.state.ingredients,
-                price: this.state.totalPrice,
-                customer: {
-                    name: 'Yulia Gembarzhevskaya',
-                    address: {
-                        street: 'Teststreet 1',
-                        zipCode: '81549',
-                        country: 'Germany'
-                    },
-                    emaol: 'test@test.com'
-                },
-                deliveryMethod: 'fastest'
-            }
-            axios.post('/orders.json', order)
-                .then(response => {
-                    this.setState({loading: false, purchasing: false});
-                })
-                .catch(error => {
-                    this.setState({loading: false, purchasing: false});
-                });
+            // this.setState({loading: true});
+            // const order = {
+            //     ingredients: this.state.ingredients,
+            //     price: this.state.totalPrice,
+            //     customer: {
+            //         name: 'Yulia Gembarzhevskaya',
+            //         address: {
+            //             street: 'Teststreet 1',
+            //             zipCode: '81549',
+            //             country: 'Germany'
+            //         },
+            //         emaol: 'test@test.com'
+            //     },
+            //     deliveryMethod: 'fastest'
+            // }
+            // axios.post('/orders.json', order)
+            //     .then(response => {
+            //         this.setState({loading: false, purchasing: false});
+            //     })
+            //     .catch(error => {
+            //         this.setState({loading: false, purchasing: false});
+            //     });
+            this.props.history.push('/checkout');
         }
 
         render() {
@@ -144,7 +145,7 @@ class BurgerBuilder extends Component {
                 orderSummary = <OrderSummary
                     price={this.state.totalPrice}
                     purchaseCanceled={this.purchaseCancelHandler}
-                    purcahseContinued={this.purchaseContinueHandler}
+                    purchaseContinued={this.purchaseContinueHandler}
                     ingredients={this.state.ingredients} />
             }
 
