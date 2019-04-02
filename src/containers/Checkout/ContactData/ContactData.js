@@ -29,7 +29,7 @@ class ContactData extends Component {
                     zipCode: '81549',
                     country: 'Germany'
                 },
-                emaol: 'test@test.com'
+                email: 'test@test.com'
             },
             deliveryMethod: 'fastest'
         }
