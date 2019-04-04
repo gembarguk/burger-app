@@ -57,7 +57,7 @@ class ContactData extends Component {
                             {value: 'cheapest', displayValue: 'Cheapest'},
                         ],
                         type: 'text',
-                        placeholder: 'Your name'
+                        placeholder: 'Your delivery method'
                     },
                     value: ''
                 }
