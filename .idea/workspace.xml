@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a91a9c46-a3d0-4c73-b38d-6494bd982a94" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Input/Input.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Input/Input.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Input/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Input/Input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Button/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Button/Button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Button/Button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -29,9 +30,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="36" />
+          <entry key="css" value="37" />
           <entry key="html" value="1" />
-          <entry key="js" value="85" />
+          <entry key="js" value="86" />
           <entry key="json" value="1" />
           <entry key="png" value="1" />
           <entry key="ts" value="1" />
@@ -39,11 +40,11 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="36" />
+          <entry key="CSS" value="37" />
           <entry key="HTML" value="1" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="78" />
+          <entry key="JavaScript" value="79" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="TypeScript" value="1" />
         </counts>
@@ -55,17 +56,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="2682" />
+          <entry key="css" value="2722" />
           <entry key="html" value="10" />
-          <entry key="js" value="19187" />
+          <entry key="js" value="19458" />
           <entry key="txt" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="2682" />
+          <entry key="CSS" value="2722" />
           <entry key="HTML" value="10" />
-          <entry key="JavaScript" value="18318" />
+          <entry key="JavaScript" value="18589" />
           <entry key="PLAIN_TEXT" value="890" />
         </counts>
       </usages-collector>
@@ -103,11 +104,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="168" column="60" selection-start-line="168" selection-start-column="60" selection-end-line="168" selection-end-column="60" />
+            <state relative-caret-position="629">
+              <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/UI/Button/Button.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/UI/Button/Button.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -121,7 +140,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/UI/Input/Input.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -172,6 +191,7 @@
       <find>stronn</find>
       <find>emaol</find>
       <find>delivery</find>
+      <find>onSub</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -192,8 +212,6 @@
         <option value="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.js" />
         <option value="$PROJECT_DIR$/src/components/UI/Backdrop/Backdrop.css" />
         <option value="$PROJECT_DIR$/src/components/UI/Backdrop/Backdrop.js" />
-        <option value="$PROJECT_DIR$/src/components/UI/Button/Button.css" />
-        <option value="$PROJECT_DIR$/src/components/UI/Button/Button.js" />
         <option value="$PROJECT_DIR$/src/components/Navigation/Toolbar/Tollbar.js" />
         <option value="$PROJECT_DIR$/src/components/Layout/Layout.css" />
         <option value="$PROJECT_DIR$/config/webpack.config.js" />
@@ -228,9 +246,11 @@
         <option value="$PROJECT_DIR$/src/containers/Orders/Orders.js" />
         <option value="$PROJECT_DIR$/src/components/Order/Order.js" />
         <option value="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.css" />
-        <option value="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js" />
         <option value="$PROJECT_DIR$/src/components/UI/Input/Input.css" />
         <option value="$PROJECT_DIR$/src/components/UI/Input/Input.js" />
+        <option value="$PROJECT_DIR$/src/components/UI/Button/Button.js" />
+        <option value="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js" />
+        <option value="$PROJECT_DIR$/src/components/UI/Button/Button.css" />
       </list>
     </option>
   </component>
@@ -327,6 +347,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="burger-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="burger-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="Button" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="burger-app" type="b2602c69:ProjectViewProjectNode" />
@@ -463,7 +491,7 @@
       <workItem from="1554215698925" duration="5703000" />
       <workItem from="1554295266402" duration="275000" />
       <workItem from="1554296344760" duration="10683000" />
-      <workItem from="1554366126110" duration="11595000" />
+      <workItem from="1554366126110" duration="13846000" />
     </task>
     <task id="LOCAL-00001" summary="Outputting the Orders">
       <created>1554299852001</created>
@@ -476,7 +504,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139072000" />
+    <option name="totallyTimeSpent" value="141323000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -491,7 +519,7 @@
     <frame x="1971" y="0" width="1806" height="989" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49829352" visible="true" weight="0.15214932" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49829352" visible="true" weight="0.15214932" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.5017065" side_tool="true" weight="0.15603249" />
@@ -505,7 +533,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32982457" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3251462" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3251462" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -611,13 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="327" column="59" lean-forward="true" selection-start-line="327" selection-start-column="59" selection-end-line="327" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/Button/Button.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -750,13 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/Button/Button.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1513">
@@ -885,16 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="168" column="60" selection-start-line="168" selection-start-column="60" selection-end-line="168" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UI/Input/Input.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
@@ -909,6 +913,30 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UI/Button/Button.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UI/Button/Button.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
         </state>
       </provider>
     </entry>
