@@ -55,7 +55,7 @@
         <counts>
           <entry key="css" value="2632" />
           <entry key="html" value="10" />
-          <entry key="js" value="18327" />
+          <entry key="js" value="18686" />
           <entry key="txt" value="21" />
         </counts>
       </usages-collector>
@@ -63,7 +63,7 @@
         <counts>
           <entry key="CSS" value="2632" />
           <entry key="HTML" value="10" />
-          <entry key="JavaScript" value="17458" />
+          <entry key="JavaScript" value="17817" />
           <entry key="PLAIN_TEXT" value="890" />
         </counts>
       </usages-collector>
@@ -101,8 +101,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="77" column="21" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="21" />
+            <state relative-caret-position="306">
+              <caret line="105" column="67" lean-forward="true" selection-start-line="105" selection-start-column="67" selection-end-line="105" selection-end-column="67" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -470,7 +470,7 @@
       <workItem from="1554215698925" duration="5703000" />
       <workItem from="1554295266402" duration="275000" />
       <workItem from="1554296344760" duration="10683000" />
-      <workItem from="1554366126110" duration="4537000" />
+      <workItem from="1554366126110" duration="8357000" />
     </task>
     <task id="LOCAL-00001" summary="Outputting the Orders">
       <created>1554299852001</created>
@@ -483,7 +483,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132014000" />
+    <option name="totallyTimeSpent" value="135834000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -911,8 +911,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="77" column="21" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="21" />
+        <state relative-caret-position="306">
+          <caret line="105" column="67" lean-forward="true" selection-start-line="105" selection-start-column="67" selection-end-line="105" selection-end-column="67" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
