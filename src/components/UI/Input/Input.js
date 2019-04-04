@@ -3,13 +3,19 @@ import classes from './Input.css';
 
 const input = (props) => {
     let inputElement = null;
+    const inputClasses = [classes.InputElement];
+
+    if (props.invalid && props.shouldValidate) {
+        inputClasses.push(classes.Invalid);
+    }
 
     switch (props.elementType) {
         case ('input'):
-            inputElement = <input className={classes.InputElement}
+            inputElement = <input className={inputClasses.join(' ')}
                                   onChange={props.changed}
                                   {...props.elementConfig}
-                                  value={props.value} />;
+                                  value={props.value}
+                                />;
             break;
         case ('taxtarea'):
             inputElement = <textarea className={classes.InputElement}

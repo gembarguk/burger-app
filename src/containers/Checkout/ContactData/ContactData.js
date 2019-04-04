@@ -82,9 +82,6 @@ class ContactData extends Component {
                         placeholder: 'Your delivery method'
                     },
                     value: '',
-                    validation: {
-                        required: true
-                    },
                     valid: false
                 }
             },
@@ -159,6 +156,8 @@ class ContactData extends Component {
                    <Input key={formElement.id}
                           elementType={formElement.config.elementType}
                           elementConfig={formElement.config.elementConfig}
+                          invalid={!formElement.config.valid}
+                          shouldValidate={formElement.config.validation}
                           changed={(event) => this.inputChangedHandler(event, formElement.id)}
                           value={formElement.config.value}/>
             ))}
