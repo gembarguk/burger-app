@@ -57,7 +57,7 @@ class BurgerBuilder extends Component {
 
         render() {
             const disabledInfo = {
-                ...this.props.ings.state.ingredients
+                ...this.props.ings
             };
             for (let key in disabledInfo) {
                 disabledInfo[key] = disabledInfo[key] <= 0
@@ -66,13 +66,13 @@ class BurgerBuilder extends Component {
 
             let burger = this.state.error ? <p>Ingredients can't be loaded</p> : <Spinner />
 
-            if (this.props.ings.state.ingredients) {
+            if (this.props.ings) {
                 burger =  (
                     < Auxilary>
-                        <Burger ingredients={this.props.ings.ingredients}/>
+                        <Burger ingredients={this.props.ings}/>
                         <BuildControls
-                            ingredientAdded={this.props.onIngredientAdded()}
-                            ingredientRemoved={this.props.onIngredientRemoved()}
+                            ingredientAdded={this.props.onIngredientAdded}
+                            ingredientRemoved={this.props.onIngredientRemoved}
                             disabled={disabledInfo}
                             purchasable={this.updatePurschaseState(this.props.ings)}
                             ordered={this.purchaseHandler}
@@ -83,7 +83,7 @@ class BurgerBuilder extends Component {
                     price={this.props.price}
                     purchaseCanceled={this.purchaseCancelHandler}
                     purchaseContinued={this.purchaseContinueHandler}
-                    ingredients={this.props.ings.ingredients} />
+                    ingredients={this.props.ings} />
             }
 
             if (this.state.loading) {
@@ -118,4 +118,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(mapDispatchToProps, mapDispatchToProps)(withErrorHandler(BurgerBuilder, axios));
+export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(BurgerBuilder, axios));
