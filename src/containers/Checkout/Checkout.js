@@ -47,8 +47,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onInitPurchase: dispatch(actions.purchaseInit())
+        onInitPurchase: () => dispatch(actions.purchaseInit())
     }
 }
 
-export default connect(mapStateToProps, mapStateToProps, mapDispatchToProps)(Checkout);
+export default connect(mapStateToProps, mapDispatchToProps)(Checkout);
