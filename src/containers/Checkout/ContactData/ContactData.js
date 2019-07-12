@@ -117,7 +117,6 @@ class ContactData extends Component {
 
         return isValid;
     }
-
     orderHandler = (event) => {
         event.preventDefault();
         const formData = {};
