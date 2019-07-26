@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 import Button from '../../../components/UI/Button/Button';
 import Spinner from '../../../components/UI/Spinner/Spinner';
@@ -8,92 +8,93 @@ import axios from '../../../axios-orders';
 import Input from '../../../components/UI/Input/Input';
 import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
 import * as actions from '../../../store/actions/index';
+import {updateObject} from '../../../shared/utility';
 
 class ContactData extends Component {
     state = {
         orderForm: {
-                name: {
-                    elementType: 'input',
-                    elementConfig: {
-                        type: 'text',
-                        placeholder: 'Your name'
-                    },
-                    value: '',
-                    validation: {
-                        required: true
-                    },
-                    valid: false,
-                    touched: false
+            name: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'Your name'
                 },
-                street: {
-                    elementType: 'input',
-                    elementConfig: {
-                        type: 'text',
-                        placeholder: 'Street'
-                    },
-                    value: '',
-                    validation: {
-                        required: true
-                    },
-                    valid: false,
-                    touched: false
+                value: '',
+                validation: {
+                    required: true
                 },
-                zipCode: {
-                    elementType: 'input',
-                    elementConfig: {
-                        type: 'text',
-                        placeholder: 'ZIP CODE'
-                    },
-                    value: '',
-                    validation: {
-                        required: true,
-                        minLength: 5,
-                        maxLength: 5
-                    },
-                    valid: false,
-                    touched: false
-                },
-                country: {
-                    elementType: 'input',
-                    elementConfig: {
-                        type: 'text',
-                        placeholder: 'Country'
-                    },
-                    value: '',
-                    validation: {
-                        required: true
-                    },
-                    valid: false,
-                    touched: false
-                },
-                email: {
-                    elementType: 'input',
-                    elementConfig: {
-                        type: 'email',
-                        placeholder: 'Your mail'
-                    },
-                    value: '',
-                    validation: {
-                        required: true
-                    },
-                    valid: false,
-                    touched: false
-                },
-                deliveryMethod: {
-                    elementType: 'select',
-                    elementConfig: {
-                        options: [
-                            {value: 'fastest', displayValue: 'Fastest'},
-                            {value: 'cheapest', displayValue: 'Cheapest'},
-                        ],
-                        type: 'text',
-                        placeholder: 'Your delivery method'
-                    },
-                    value: 'fastest',
-                    validation: {},
-                    valid: true
-                }
+                valid: false,
+                touched: false
             },
+            street: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'Street'
+                },
+                value: '',
+                validation: {
+                    required: true
+                },
+                valid: false,
+                touched: false
+            },
+            zipCode: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'ZIP CODE'
+                },
+                value: '',
+                validation: {
+                    required: true,
+                    minLength: 5,
+                    maxLength: 5
+                },
+                valid: false,
+                touched: false
+            },
+            country: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'Country'
+                },
+                value: '',
+                validation: {
+                    required: true
+                },
+                valid: false,
+                touched: false
+            },
+            email: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'email',
+                    placeholder: 'Your mail'
+                },
+                value: '',
+                validation: {
+                    required: true
+                },
+                valid: false,
+                touched: false
+            },
+            deliveryMethod: {
+                elementType: 'select',
+                elementConfig: {
+                    options: [
+                        {value: 'fastest', displayValue: 'Fastest'},
+                        {value: 'cheapest', displayValue: 'Cheapest'},
+                    ],
+                    type: 'text',
+                    placeholder: 'Your delivery method'
+                },
+                value: 'fastest',
+                validation: {},
+                valid: true
+            }
+        },
         formIsValid: false
     }
 
@@ -117,6 +118,7 @@ class ContactData extends Component {
 
         return isValid;
     }
+
     orderHandler = (event) => {
         event.preventDefault();
         const formData = {};
@@ -135,25 +137,22 @@ class ContactData extends Component {
     }
 
     inputChangedHandler = (event, inputIdentifier) => {
-          const updatedOrderForm = {
-              ...this.state.orderForm
-          }
-          const updatedFormElement = {
-              ...updatedOrderForm[inputIdentifier]
-          };
-          updatedFormElement.value = event.target.value;
-          updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
-          updatedFormElement.touched = true;
-          updatedOrderForm[inputIdentifier] = updatedFormElement;
+        const updatedFormElement = updateObject(this.state.orderForm[inputIdentifier], {
+            value: event.target.value,
+            valid: this.checkValidity(event.target.value, this.state.orderForm[inputIdentifier].validation),
+            touched: true
+        });
 
-          let formIsValid = true;
-          for (let inputIdentifiers in updatedOrderForm) {
-              formIsValid = updatedOrderForm[inputIdentifiers].valid && formIsValid;
-          }
+        const updatedOrderForm = updateObject(this.state.orderForm, {
+            [inputIdentifier]: updatedFormElement
+        });
+        let formIsValid = true;
+        for (let inputIdentifiers in updatedOrderForm) {
+            formIsValid = updatedOrderForm[inputIdentifiers].valid && formIsValid;
+        }
 
-
-          this.setState({orderForm : updatedOrderForm, formIsValid: formIsValid});
-    }
+        this.setState({orderForm: updatedOrderForm, formIsValid: formIsValid});
+    };
 
     render() {
         const formElementsArray = [];
@@ -165,21 +164,21 @@ class ContactData extends Component {
         }
         let form = (
             <form onSubmit={this.orderHandler}>
-            {formElementsArray.map(formElement => (
-                   <Input key={formElement.id}
-                          elementType={formElement.config.elementType}
-                          elementConfig={formElement.config.elementConfig}
-                          invalid={!formElement.config.valid}
-                          shouldValidate={formElement.config.validation}
-                          touched={formElement.config.touched}
-                          changed={(event) => this.inputChangedHandler(event, formElement.id)}
-                          errorMessage={"Please enter valid " + formElement.id}
-                          value={formElement.config.value}/>
-            ))}
-            <Button btnType="Success" disabled={!this.state.formIsValid}>ORDER</Button>
-        </form>);
+                {formElementsArray.map(formElement => (
+                    <Input key={formElement.id}
+                           elementType={formElement.config.elementType}
+                           elementConfig={formElement.config.elementConfig}
+                           invalid={!formElement.config.valid}
+                           shouldValidate={formElement.config.validation}
+                           touched={formElement.config.touched}
+                           changed={(event) => this.inputChangedHandler(event, formElement.id)}
+                           errorMessage={"Please enter valid " + formElement.id}
+                           value={formElement.config.value}/>
+                ))}
+                <Button btnType="Success" disabled={!this.state.formIsValid}>ORDER</Button>
+            </form>);
         if (this.props.loading) {
-            form = <Spinner />;
+            form = <Spinner/>;
         }
 
         return (
