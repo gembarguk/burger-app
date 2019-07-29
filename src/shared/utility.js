@@ -24,8 +24,8 @@ export const checkValidity = (value, rules) => {
     }
 
     if (rules.isEmail) {
-        const pattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        const pattern = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
         isValid = pattern.test(value) && isValid;
     }
     return isValid;
-}
+};
