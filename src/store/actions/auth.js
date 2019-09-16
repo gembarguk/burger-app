@@ -24,48 +24,34 @@ export const authFail = (error) => {
 };
 
 export const checkAuthTimeout = (expirationTime) => {
-    return dispatch => {
-        setTimeout(() => {
-            dispatch(logout());
-        }, expirationTime * 1000);
+    return {
+        type: actionTypes.AUTH_CHECK_TIMEOUT,
+        expirationTime: expirationTime
     }
 };
 
 export const logout = () => {
-     localStorage.removeItem('token');
-     localStorage.removeItem('expirationDate');
-     localStorage.removeItem('userId');
+     // localStorage.removeItem('token');
+     // localStorage.removeItem('expirationDate');
+     // localStorage.removeItem('userId');
      return {
-        type: actionTypes.AUTH_LOGOUT
+        type: actionTypes.AUTH_INITIATE_LOGOUT
      };
 };
 
-export const auth = (email, password, isSignup) => {
-    return dispatch => {
-        dispatch(authStart());
-        const authData = {
-            email: email,
-            password: password,
-            returnSecureToken: true
-        };
-        let url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyBuU9YH1sIYDYudTl2oFzXhxK1qHdkniRM';
-        if (!isSignup) {
-            url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyBuU9YH1sIYDYudTl2oFzXhxK1qHdkniRM'
-        }
-
-        axios.post(url, authData)
-            .then(response => {
-                const expirationDate = new Date(new Date().getTime() + response.data.expiresIn * 1000);
-                localStorage.setItem('token', response.data.idToken);
-                localStorage.setItem('expirationDate', expirationDate);
-                localStorage.setItem('userId', response.data.localId);
-                dispatch(authSuccess(response.data.idToken, response.data.localId));
-                dispatch(checkAuthTimeout(response.data.expiresIn));
-            })
-            .catch(err => {
-               dispatch(authFail(err))
-            });
+export const logoutSucceed = () => {
+    return {
+        type: actionTypes.AUTH_LOGOUT
     };
+};
+
+export const auth = (email, password, isSignup) => {
+    return {
+        type: actionTypes.AUTH_USER,
+        email: email,
+        password: password,
+        isSignup: isSignup
+    }
 };
 
 export const setAuthRedirectPath = (path) => {
