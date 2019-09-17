@@ -1,3 +1,5 @@
+import {fetchOrdersStart, fetchOrdersSuccess} from "./order";
+
 export {
     addIngredient,
     removeIngredient,
@@ -8,7 +10,13 @@ export {
 export {
     purchaseBurger,
     purchaseInit,
-    fetchOrders
+    fetchOrders,
+    purchaseBurgerStart,
+    purchaseBurgerFail,
+    purchaseBurgerSuccess,
+    fetchOrdersStart,
+    fetchOrdersSuccess,
+    fetchOrdersFail
 } from './order';
 
 export {
